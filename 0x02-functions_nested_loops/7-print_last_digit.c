@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h" 
 /**
  * print_last_digit - prints last digit of number
  * @c: is the number to be computed
