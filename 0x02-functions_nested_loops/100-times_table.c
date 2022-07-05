@@ -22,13 +22,13 @@ void print_times_table(int n)
 			else if (hold < 10)
 			{
 				_putchar(' ');
-				_pitchar(' ');
+				_putchar(' ');
 				_putchar('0' + hold);
 			}
 			else if (hold < 100)
 			{
 				_putchar(' ');
-				_pitchar('0' + hold / 10);
+				_putchar('0' + hold / 10);
 				_putchar('0' + hold % 10);
 			}
 			else
