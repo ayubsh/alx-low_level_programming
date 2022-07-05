@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * print_sign - checks the parity of c
  * @c: c is an int to be checked
