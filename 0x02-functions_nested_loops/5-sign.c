@@ -6,7 +6,7 @@
  */
 int print_sign(int c)
 {
-	if (n > 0)
+	if (c > 0)
 	{
 		printf("+");
 		return (1);
