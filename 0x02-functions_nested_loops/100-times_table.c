@@ -8,6 +8,8 @@ void print_times_table(int n)
 {
 	int a, b, hold;
 
+	if (n > 15 || n < 0)
+		return;
 	for (a = 0; a <= n; a++)
 	{
 		for (b = 0; b <= n; b++)
@@ -20,14 +22,21 @@ void print_times_table(int n)
 			else if (hold < 10)
 			{
 				_putchar(' ');
+				_pitchar(' ');
 				_putchar('0' + hold);
+			}
+			else if (hold < 100)
+			{
+				_putchar(' ');
+				_pitchar('0' + hold / 10);
+				_putchar('0' + hold % 10);
 			}
 			else
 			{
-				_putchar('0' + hold / 10);
+				_putchar('0' + hold / 100);
+				_putchar('0' + (hold - 100) / 10);
 				_putchar('0' + hold % 10);
 			}
-
 			if (b < n)
 			{
 				_putchar(',');
