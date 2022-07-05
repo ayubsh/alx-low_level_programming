@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * print_to_98 - print number from n to 98
  * @n: starting point
