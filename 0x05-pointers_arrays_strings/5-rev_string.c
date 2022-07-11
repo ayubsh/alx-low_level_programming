@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_rev - prints the reverse of the input
+ * rev_string - prints the reverse of the input
  * @s: input to be reversed
  * Return: void
  */
@@ -17,7 +17,7 @@ void rev_string(char *s)
 
 	while (len >= 0)
 	{
-		putchar(s[len]);
+		s[len];
 		len--;
 	}
 	putchar('\n');
