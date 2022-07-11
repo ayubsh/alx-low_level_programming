@@ -1,10 +1,10 @@
+#include "main.h"
 #include <string.h>
 #include <stdio.h>
-#include "main.h"
 
 /**
- * rev_string - reverse string
- * @s: string to be reverse
+ * print_rev - prints the reverse of the input
+ * @s: input to be reversed
  * Return: void
  */
 
