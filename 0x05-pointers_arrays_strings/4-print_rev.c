@@ -18,7 +18,7 @@ void print_rev(char *s)
 	{
 		if (s[len] == '\0')
 		{
-			i--;
+			len--;
 		}
 		putchar(s[len]);
 		len--;
