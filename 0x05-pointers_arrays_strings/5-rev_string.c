@@ -5,21 +5,20 @@
 /**
  * rev_string - prints the reverse of the input
  * @s: input to be reversed
- * Return: void
+ * * Return: void
  */
 
 void rev_string(char *s)
 {
 	int i, len, temp;
 
-	len = strlen(s) / 2;
-	i = 0;
+	len = strlen(s) - 1;
 
-	while (s[i] != '\0')
+	for (i = 0; i < len / 2; i++)
 	{
 		temp = s[i];
-		s[i] = s[len - (i + 1)];
-		s[len - (i + 1)] = temp;
-		i++;
+		s[i] = s[len];
+		s[len] = temp;
+		len--;
 	}
 }
