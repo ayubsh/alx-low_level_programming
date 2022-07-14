@@ -14,7 +14,7 @@ char *rot13(char *s)
 
 	while (s[i] != '\0')
 	{
-		for (j = 0; i < 27; i++)
+		for (j = 0; i < 52; i++)
 		{
 			if (s[i] == alph[j])
 			{
