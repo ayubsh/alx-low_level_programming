@@ -9,6 +9,8 @@ char *rot13(char *s)
 {
 	int i, j;
 
+	i = 0;
+
 	char alph[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char r13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
@@ -19,7 +21,6 @@ char *rot13(char *s)
 			if (s[i] == alph[j])
 			{
 				s[i] = r13[j];
-				break;
 			}
 		}
 
