@@ -23,6 +23,9 @@ char *str_concat(char *s1, char *s2)
 	size = strlen(s1) + strlen(s2) + 1;
 	newarr = (char *) malloc(size * sizeof(char));
 
+	if (newarr == NULL)
+		return (NULL);
+
 	for (i = 0; s1[i] != '\0'; i++)
 	{
 		newarr[i] = s1[i];
