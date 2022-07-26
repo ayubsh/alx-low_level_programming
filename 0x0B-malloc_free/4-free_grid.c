@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * fre_grid - frees 2d grid
+ * free_grid - frees 2d grid
  * @grid: the grid to be freed
  * @height: height of the grid
  * Return: void
