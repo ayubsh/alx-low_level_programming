@@ -22,7 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	fill = arr;
-	for (i = 0; i < size; i++)
+	for (i = 0; i < (size * nmemb); i++)
 		fill[i] = '\0';
 
 	return (arr);
