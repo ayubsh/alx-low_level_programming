@@ -1,5 +1,4 @@
-#ifdef _PI_
-#define _PI_
+#ifdef PI
 
 #define PI 3.14159265359
 
