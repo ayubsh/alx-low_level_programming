@@ -10,6 +10,5 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-  while(name)
-    printf("%s\n", name);
+  f(name);
 }
