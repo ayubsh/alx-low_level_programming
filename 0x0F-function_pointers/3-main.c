@@ -11,7 +11,6 @@
 int main(int args, char *argv[])
 {
 	int a, b, res;
-	char operator;
 	int (*uniFucntion)(int, int);
 
 	if (args != 4)
@@ -31,7 +30,6 @@ int main(int args, char *argv[])
 		exit(99);
 	}
 
-	operator = *argv[2];
 
 	res = uniFucntion(a, b);
 
