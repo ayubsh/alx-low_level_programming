@@ -24,10 +24,10 @@ int main(int args, char *argv[])
 
 	uniFucntion = get_op_func(argv[2]);
 
-	if (!uniFunction)
+	if (!uniFucntion)
 	{
 		printf("Error\n");
-		exit(99)
+		exit(99);
 	}
 
 	res = uniFucntion(a, b);
