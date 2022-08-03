@@ -8,12 +8,12 @@
  * @argv: array containing cmnld arguments
  * Return: returns 0 always success
  */
-int main(int args, char *argv[])
+int main(int argc, char *argv[])
 {
 	int a, b, res;
 	int (*uniFucntion)(int, int);
 
-	if (args != 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
