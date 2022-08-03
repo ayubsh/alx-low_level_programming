@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "3-calc.h"
+
+/**
+ * main - the entry point
+ * @args: number of cmnld arguments
+ * @argv: array containing cmnld arguments
+ * Return: returns 0 always success
+ */
+int main(int args, char *argv[])
+{
+	int a, b, res;
+	int (*uniFucntion)(int, int);
+
+	if (args < 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	uniFucntion = get_op_func(argv[2]);
+
+	res = uniFucntion(a, b);
+
+	printf("%d\n", res);
+
+	return (0);
+}
