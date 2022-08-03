@@ -14,7 +14,7 @@ int main(int args, char *argv[])
 	char operator;
 	int (*uniFucntion)(int, int);
 
-	if (args < 4)
+	if (args != 4)
 	{
 		printf("Error\n");
 		exit(98);
@@ -32,12 +32,6 @@ int main(int args, char *argv[])
 	}
 
 	operator = *argv[2];
-
-	if ((operator == '/' || operator == '%') && b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
 
 	res = uniFucntion(a, b);
 
