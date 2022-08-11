@@ -2,14 +2,17 @@
 #include <stdlib.h>
 
 /**
- * free_list - frees linked list recursivley
+ * free_list - frees linked list
  * @head: ptr to the beginning of the linked list
  */
 void free_list(list_t *head)
 {
-	if (head == NULL)
-		return;
+	list_t *temp;
 
-	free_list(head->next);
-	free(head);
+	while ((temp = head) != NULL)
+	{
+		head = head->next;
+		free(temp->str);
+		free(temp);
+	}
 }
