@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -33,7 +34,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (index != 0)
 	{
-		tmp->next = next->next;
+		tmp->next = n_node->next;
 		free(n_node);
 	}
 	else
