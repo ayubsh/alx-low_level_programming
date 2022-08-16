@@ -1,6 +1,27 @@
 #include <stdlib.h>
 #include "lists.h"
 
+
+/**
+ * listint_len - computes the length of linked list
+ * @h: ptr to the head of linked list
+ * Return: return the length of linked list
+ */
+unsigned int getlen(const listint_t *h)
+{
+	unsigned int len_nodes;
+
+	len_nodes = 0;
+
+	while (h)
+	{
+		h = h->next;
+		len_nodes++;
+	}
+
+	return (len_nodes);
+}
+
 /**
  * insert_nodeint_at_index - insets node at given index
  * @head: ptr to the head od linked list
@@ -13,7 +34,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *newnode, *tmp;
 	unsigned int nth;
 
+
 	tmp = *head;
+	nth = getlen(*head);
 	newnode = malloc(sizeof(listint_t));
 
 	if (newnode == NULL)
@@ -22,23 +45,22 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	newnode->n = n;
 	newnode->next = NULL;
 
-	for (nth = 0; tmp; nth++)
-	{
-		if (idx == 0)
-		{
-			newnode->next = tmp->next;
-			tmp->next = newnode;
-			return (newnode);
-		}
-		else if (nth == idx - 1)
-		{
-			newnode->next = tmp->next;
-			tmp->next = newnode;
-			return (newnode);
-		}
+	if (idx > nth)
+		return (NULL);
 
-		tmp = tmp->next;
+	if (idx == 0)
+	{
+		newnode->next = tmp->next;
+		tmp->next = newnode;
+	}
+	else
+	{
+		while (--idx)
+			tmp = tmp->next;
+
+		newnode->next = tmp->next;
+		tmp->next = newnode;
 	}
 
-	return (NULL);
+	return (newnode);
 }
