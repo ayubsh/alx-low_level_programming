@@ -14,7 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-	int file_to, file_from, num_read, closed1, closed2;
+	int file_to, file_from, num_read;
 	char buffer[1024];
 
 	if (argc != 3)
